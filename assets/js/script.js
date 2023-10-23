@@ -1,13 +1,19 @@
-// Fetch response for city latatude and longitude
+const key = 'fc8bffadcdca6a94d021c093eac22797'
+var city = "chicago"
 
-requestUrl = 'https://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=fc8bffadcdca6a94d021c093eac22797';
+// Fetch response for city name latatude and longitude
 
-fetch(requestUrl)
+requestUrl0 = 'https://api.openweathermap.org/geo/1.0/direct?q='+city+'&limit=5&appid='+key;
+
+fetch(requestUrl0)
   .then(function (response) {
     return response.json();
   })
   .then(function (data) {
     console.log(data);
+    console.log (data[0].name)
+    console.log (data[0].lat)
+    console.log (data[0].lon)
   });
 
 // Fetch response for weather
