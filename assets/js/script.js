@@ -1,5 +1,7 @@
 const key = 'fc8bffadcdca6a94d021c093eac22797'
 var city = "chicago"
+var cityTitle= document.getElementById("cityTitle")
+cityTitle.innerHTML = city; 
 
 // Fetch request for city name latatude and longitude
 
