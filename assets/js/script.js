@@ -18,7 +18,7 @@ fetch(requestUrl0)
 
 // Fetch response for weather
 
-requestUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=51.4875167&lon=-0.1687007&appid=fc8bffadcdca6a94d021c093eac22797';
+requestUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=51.4875167&lon=-0.1687007&appid='+key;
 
 fetch(requestUrl)
   .then(function (response) {
