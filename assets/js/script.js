@@ -3,43 +3,16 @@
 // Error: "key already defined." Ran fine in Live server
 
 var key = 'fc8bffadcdca6a94d021c093eac22797'
+var key1 ='4405d10b6225de2b46a773cf230ca378'
 var city = document.getElementById("citysearch").value
 var cityTitle= document.getElementById("cityTitle")
-// cityTitle.innerHTML = city; 
 var search = document.getElementById("search")
 var Temp = document.getElementById('Temp')
 var Wind = document.getElementById('Wind')
 var Humidity = document.getElementById('Humidity')
+var y = 0
+var element = []
 
-// Fetch request for city name latatude and longitude
-
-// requestUrl0 = 'https://api.openweathermap.org/geo/1.0/direct?q='+city+'&limit=5&appid='+key;
-
-// fetch(requestUrl0)
-//   .then(function (response) {
-//     return response.json();
-//   })
-//   .then(function (data) {
-//     console.log(data);
-//     console.log (data[0].name)
-//     console.log (data[0].lat)
-//     console.log (data[0].lon)
-//     window.alert(data[0].name)
-//   });
-// return}
-
-
-// Fetch request for weather
-
-// requestUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=51.4875167&lon=-0.1687007&appid='+key;
-
-// fetch(requestUrl)
-//   .then(function (response) {
-//     return response.json();
-//   })
-//   .then(function (data) {
-//     console.log(data);
-//   });
 
 
 
@@ -80,7 +53,8 @@ search.onclick =  function () {
 
       .then(function (data) {
        console.log(data);
-// Checks object length to dertermine if city exists
+
+// Checks object length to determine if city exists
 
   if (data.length < 1) {
     Temp.innerHTML = ""
@@ -88,13 +62,68 @@ search.onclick =  function () {
     Humidity.innerHTML = ""
     cityTitle.innerHTML = "City not found. Please check spelling and try again."
     return}
-
-    // City Name is confirmed
+  
     
-    cityTitle.innerHTML = data[0].name}
-       )
+
+ // City Name is confirmed
+ 
+    var cityNam = data[0].name
+    var cityLat = data[0].lat
+    var cityLon = data[0].lon
+    cityTitle.innerHTML = cityNam
+   console.log(cityLat)
+   console.log(cityLon)
+  
+
+ // Fetch request for weather
+
+requestUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + cityLat + '&lon=' + cityLon +'&appid='+key;
+
+
+fetch(requestUrl)
+.then(function (response) {
+      return response.json();
+    })
+
+  .then(function (data) {
+    console.log(data);
+    console.log(data.list.length)
+
+    // get array elements that correspond to 12 noon
+   
+
+    for (let i = 0; i < data.list.length; i++) {
+      var index=[] 
+     
+    
+      index[i] = data.list[i].dt_txt.slice(11,13)
+      console.log(data.list[i].dt_txt.slice(11,13));
+      console.log(index[i]);
+
+        if (index[i] === "12") {
+        element[y]=i
+        console.log(element[y])
+        y++
+        
+        }
+     
       }
+        
+        for (let i = 0; i < element.length;i++) {
+          console.log(element[i])
+        }
+      
+        
+  
+      
+      })
+      
+
+
+      })
+
 
   
-        };
+  }
+}
     
