@@ -5,14 +5,17 @@
 var key = 'fc8bffadcdca6a94d021c093eac22797'
 var key1 ='4405d10b6225de2b46a773cf230ca378'
 var city = document.getElementById("citysearch").value
-var cityTitle= document.getElementById("cityTitle")
 var search = document.getElementById("search")
 var Temp = document.getElementById('Temp')
 var Wind = document.getElementById('Wind')
 var Humidity = document.getElementById('Humidity')
 var y = 0
 var element = []
-
+var dayDate = []
+var dayIcon = []
+var dayTemp = []
+var dayHumid = []
+var timeZone
 
 
 
@@ -70,9 +73,6 @@ search.onclick =  function () {
     var cityNam = data[0].name
     var cityLat = data[0].lat
     var cityLon = data[0].lon
-    cityTitle.innerHTML = cityNam
-   console.log(cityLat)
-   console.log(cityLon)
   
 
  // Fetch request for weather
@@ -88,32 +88,56 @@ fetch(requestUrl)
   .then(function (data) {
     console.log(data);
     console.log(data.list.length)
-
-    // get array elements that correspond to 12 noon
+ 
+    // use timezone info to get array elements that correspond to about 12 noon local time more or less
+   
+   timeZone = (12 - Math.round((data.city.timezone/3600)/3)*3)
    
 
     for (let i = 0; i < data.list.length; i++) {
-      var index=[] 
+      let index=[] 
      
-    
-      index[i] = data.list[i].dt_txt.slice(11,13)
-      console.log(data.list[i].dt_txt.slice(11,13));
-      console.log(index[i]);
+    // change type of index[i] from a string to a number
 
-        if (index[i] === "12") {
+      index[i] = Number(data.list[i].dt_txt.slice(11,13))
+
+
+      // gets weather information for 12 noon timeframe for 5 days
+
+        if (index[i] == timeZone) {
         element[y]=i
-        console.log(element[y])
-        y++
-        
+        y++ 
         }
-     
       }
         
         for (let i = 0; i < element.length;i++) {
-          console.log(element[i])
-        }
       
+        dayDate [i] = data.list[element[i]].dt_txt.slice(0,11)
+        dayIcon [i]= data.list[element[i]].weather[0].icon
+
+        // Change kelvin to fahrenheit to nearest interger
+
+        dayTemp [i]= (Math.round((data.list[element[i]].main.temp - 273.15) * 9/5) +32)
+        dayHumid [i]= data.list[element[i]].main.humidity
+        console.log(dayDate [i])
+        console.log(dayIcon [i])
+        console.log(dayTemp [i])
+        console.log(dayHumid [i])
+        y = 0
+        // cityTitle.innerHTML = cityNam + " " + data.list[0].dt_txt
+        cityTitle.innerHTML = cityNam + " (" + data.list[0].dt_txt.slice(5,7) + "/" + data.list[0].dt_txt.slice(8,10)+ "/" + data.list[0].dt_txt.slice(0,4) + ")"
+        }
+
+
+
+
+
+
+
+
+
         
+  
   
       
       })
