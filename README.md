@@ -1,6 +1,12 @@
 # Five Day weather forcast 
 ## Description
-5 day weather forecaster is an application that displays the weather for any city the user requests. The current weather is displayed in a large, centered block along with five cards that display the anticipated weather for the next five days under the main box. ![alt-text](assets/images/Napervillesearch.png) Past searches are retained in local memory. Only the last ten searches are retained. Once the past searches have reached ten city names, the new city’s name will be spliced into the array and the oldest item will be removed.
+5 day weather forecaster is an application that displays the weather for any city the user requests. The current weather is displayed in a large, centered block along with five cards that display the anticipated weather for the next five days under the main box.
+
+![alt-text](assets/images/Napervillesearch.png) 
+
+![alt-text](assets/images/Parissearch.png)
+
+Past searches are retained in local memory. Only the last ten searches are retained. Once the past searches have reached ten city names, the new city’s name will be spliced into the array and the oldest item will be removed.
 ## Deployed Application URL
 https://bootcamp74.github.io/
 ## Table of Contents
