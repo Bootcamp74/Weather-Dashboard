@@ -1,4 +1,4 @@
-# Five Day weather forcast 
+# Five Day weather forecast 
 ## Description
 5 day weather forecaster is an application that displays the weather for any city the user requests. The current weather is displayed in a large, centered block along with five cards that display the anticipated weather for the next five days under the main box.
 
@@ -24,7 +24,9 @@ No installation is necessary as it runs from the browser on the user's computer 
 
 
 ## Features
-The project will hold the user's past ten searches into local memory and display the searches on ten button which will populate as the user uses the application [alt-text]()
+The project will hold the user's past ten searches into local memory and display the searches on ten button which will populate as the user uses the application . If the user fails to type in a city in the search box, the message “Please enter a city name” will appear in the input box![alt-text](assets/images/pleaseentr.png).
+If the user types in an unknown city, the message “City not found. Please check spelling and try again” is displayed in the main display window. ![alt-text](assets/images/nocity.png)
+Lastly, if the network goes down or there is problem getting data from the site an error message with the appropriate code is displayed. ![alt-text](assets/images/Parissearch.png) status404
 ## Languages and Technologies Used
 ![Github license](https://img.shields.io/badge/Language-NodeJs-blue.svg)
 ![Github license](https://img.shields.io/badge/Technology-Inquirer-blue.svg)
@@ -40,3 +42,6 @@ N/A
 N/A
 ## Questions
 Please send your questions [here](mailto:bradm1492@gmain.com?subject=[GitHub]%20Dev%20Connect) or visit [github/boilermaker74](https://github.com/boilermaker74).
+
+
+
