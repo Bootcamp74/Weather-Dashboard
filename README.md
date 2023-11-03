@@ -15,6 +15,7 @@ https://bootcamp74.github.io/
 * [Questions](#questions)
 ## Installation
 No installation is necessary as it runs from the browser on the user's computer on url https://bootcamp74.github.io/
+![alt-text]assets/images/Paris search.png
 
 ## Features
 The project will hold the user's past ten searches into local memory and display the searches on ten button which will populate as the user uses the application [alt-text]()
