@@ -7,6 +7,8 @@
 ![alt-text](assets/images/Parissearch.png)
 
 Past searches are retained in local memory. Only the last ten searches are retained. Once the past searches have reached ten city names, the new city’s name will be spliced into the array and the oldest item will be removed.
+
+![alt-text](assets/images/fullList.png)
 ## Deployed Application URL
 https://bootcamp74.github.io/
 ## Table of Contents
@@ -31,7 +33,11 @@ This application has some useful features. It will hold the user's searches in l
 ![alt-text](assets/images/localstorage.png)
 
 
-It will display previous searches on ten button which will populate as the user uses the application. The application is limited to ten buttons or past searches. Once the eleventh search is initiated, a new button is created and placed at the top of the list. The oldest search, which is at the bottton of the list is removed. If the user types a city name that is allready in the list, the list remains unchanged. Only new cities, which are not present in the list, are added with each new request.
+It will display previous searches on ten button which will populate as the user uses the application. 
+
+![alt-text](assets/images/fullList.png)
+
+The application is limited to ten buttons or past searches. Once the eleventh search is initiated, a new button is created and placed at the top of the list. The oldest search, which is at the bottton of the list is removed. If the user types a city name that is allready in the list, the list remains unchanged. Only new cities, which are not present in the list, are added with each new request.
 
 If the user fails to type in a city in the search box, the message “Please enter a city name” will appear in the input box above the blue search button.
 
