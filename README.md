@@ -31,7 +31,9 @@ This application has some useful features. It will hold the user's searches in l
 ![alt-text](assets/images/localstorage.png)
 
 
-It will display previous searches on ten button which will populate as the user uses the application. If the user fails to type in a city in the search box, the message “Please enter a city name” will appear in the input box.
+It will display previous searches on ten button which will populate as the user uses the application. The application is limited to ten buttons or past searches. Once the eleventh search is initiated, a new button is created and placed at the top of the list. The oldest search, which is at the bottton of the list is removed. If the user types a city name that is allready in the list, the list remains unchanged. Only new cities, which are not present in the list, are added with each new request.
+
+If the user fails to type in a city in the search box, the message “Please enter a city name” will appear in the input box above the blue search button.
 
 ![alt-text](assets/images/pleaseentr.png).
 
