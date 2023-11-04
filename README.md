@@ -50,6 +50,7 @@ If the user fails to type in a city in the search box, the message “Please ent
 
 If the user types in an unknown city, the message “City not found. Please check spelling and try again” is displayed in the main display window. 
 
+
 ![alt-text](assets/images/nocity.png)
 
 Lastly, if the network goes down or there is problem getting data from the site an error message with the appropriate code is displayed. 
