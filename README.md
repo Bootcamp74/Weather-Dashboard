@@ -49,7 +49,7 @@ Lastly, if the network goes down or there is problem getting data from the site 
 ## Dependencies
 "inquirer": "^8.2.4
 ## How to Use This Application:
-The project is run from the URL https://bootcamp74.github.io/ For the first search, the user must enter the desired city's name in the input box and ten press the search button. Once a selection is made, the user's past choices are then recalled via a set of buttons that propagate under the search box. The user may either type in a city name or use the buttons that correspond to the city name to make future searches.
+The project is run from the URL https://bootcamp74.github.io/ For the first search, the user must enter the desired city's name in the input box and then press the search button. Once a selection is made, the user's past choices are then recalled via a set of buttons that propagate under the search box. The user may either type in a city name or use the buttons that correspond to the city name to make future searches.
 ## Licenses
 ![Github license](https://img.shields.io/badge/license-MIT-blue.svg)
 ## Contributors
