@@ -4,11 +4,14 @@
 
 ![alt-text](assets/images/Napervillesearch.png) 
 
+When the user enters a new city name, the weather information is displayed and a new button appears with that city's name. If the user clicks this button the program will display that city's weather information.
+
 ![alt-text](assets/images/Parissearch.png)
 
 Past searches are retained in local memory. Only the last ten searches are retained. Once the past searches have reached ten city names, the new city’s name will be spliced into the array and the oldest item will be removed.
 
 ![alt-text](assets/images/fullList.png)
+
 ## Deployed Application URL
 https://bootcamp74.github.io/
 ## Table of Contents
