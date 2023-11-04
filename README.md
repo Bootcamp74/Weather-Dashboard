@@ -28,10 +28,16 @@ This application has some useful features. It will hold the user's searches in l
 ![alt-text](assets/images/pleaseentr.png).
 
 
-It will display previous searches on ten button which will populate as the user uses the application . If the user fails to type in a city in the search box, the message “Please enter a city name” will appear in the input box. ![alt-text](assets/images/pleaseentr.png).
+It will display previous searches on ten button which will populate as the user uses the application. If the user fails to type in a city in the search box, the message “Please enter a city name” will appear in the input box.
 
-If the user types in an unknown city, the message “City not found. Please check spelling and try again” is displayed in the main display window. ![alt-text](assets/images/nocity.png)
-Lastly, if the network goes down or there is problem getting data from the site an error message with the appropriate code is displayed. ![alt-text](assets/images/Parissearch.png) status404
+![alt-text](assets/images/pleaseentr.png).
+
+If the user types in an unknown city, the message “City not found. Please check spelling and try again” is displayed in the main display window. 
+
+![alt-text](assets/images/nocity.png)
+
+Lastly, if the network goes down or there is problem getting data from the site an error message with the appropriate code is displayed. ![alt-text](assets/images/Parissearch.png) 
+
 ## Languages and Technologies Used
 ![Github license](https://img.shields.io/badge/Language-NodeJs-blue.svg)
 ![Github license](https://img.shields.io/badge/Technology-Inquirer-blue.svg)
