@@ -40,7 +40,7 @@ It will display previous searches on ten button which will populate as the user 
 
 ![alt-text](assets/images/fullList.png)
 
-The application is limited to ten buttons or past searches. Once the eleventh search is initiated, a new button is created and placed at the top of the list. The oldest search, which is at the bottton of the list is removed. If the user types a city name that is allready in the list, the list remains unchanged. Only new cities, which are not present in the list, are added with each new request.
+The application is limited to ten buttons or past searches. Once the eleventh search is initiated, a new button is created and placed at the top of the list. The oldest search, which is at the bottton of the list is removed. If the user types a city name that is already in the list, the list remains unchanged. Only new cities, which are not present in the list, are added with each new request.
 
 ![alt-text](assets/images/pleaseentr.png).
 
