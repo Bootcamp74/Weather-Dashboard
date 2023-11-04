@@ -1,0 +1,42 @@
+#title {
+    background-color: rgb(13, 56, 148);
+    color: white;
+    text-align: center;
+}
+.Weather {
+    padding-left: 1%;
+}
+
+#citysearch  {
+    size: 2pt;
+
+}
+
+.fiveDay  { background-color: rgb(2, 2, 81);
+    max-height: 300px;
+    
+}
+
+.letter {color: white;
+
+}
+
+#wicon {
+    max-height: 5%;
+    max-width: 20%
+}
+
+@media screen and (max-width: 992px) {
+    .fiveDay {
+      font-size: 10px;
+    }
+}
+@media screen and (max-width: 300px) {
+    .fiveDay {
+      font-size: 5px;
+    }
+}
+
+.past {
+    display: none;
+}
