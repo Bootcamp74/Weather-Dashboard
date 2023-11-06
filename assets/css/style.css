@@ -1,4 +1,4 @@
-#title {
+#mainheader {
     background-color: rgb(13, 56, 148);
     color: white;
     text-align: center;
@@ -12,9 +12,20 @@
 
 }
 
+
 .fiveDay  { background-color: rgb(2, 2, 81);
     max-height: 300px;
-    
+    display: none;
+}
+
+#title{
+    display: none;
+}
+
+
+
+#cards{
+    display: none;
 }
 
 .letter {color: white;
