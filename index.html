@@ -12,47 +12,100 @@
 
 <body>
     
-    <Header id = "title">
+    <Header id = "mainheader">
         <h1>Weather Dashboard</h1>
     </Header>
 
+ <!-- Block for City Search Input and 10 buttons for previous city serches stored in local storage -->
 
     <main class="row ps-1">
-        <aside class="col-lg-2 ps-5">
-            <p>Search for a City
-            <input id="citysearch"></input>
-            <Button id = "search">Search</Button>
-            </p>
-            <p>another</p>
-            <p>another</p>
-            <p>another</p>
-            <p>another</p> 
-            <p>another</p>
-            <p>another</p>
-            <p>another</p>
-            <p>another</p>
-            <!-- <div class="weather-icon"><img src="https://openweathermap.org/img/wn/1d@2x.png" /></div>
-            <link rel="icon" href="https://openweathermap.org/img/wn/04n@2x.png">
-            <link rel="shortcut icon" href="https://openweathermap.org/img/wn/1d@2x.png" type="image/x-icon">   -->
-            <img src="./assets/image/01d@2x.png"width="20" height="auto" />
-            <img src="https://openweathermap.org/img/wn/03d@2x.png"  width="20" height="auto" >
+        <aside class="col-lg-3">
+            <h2>Search for a City:</h2>
+            <input id="citysearch"  class="col-lg-10 mb-2"></input>
+            <Button id = "search" class="col-lg-10 mb-2 btn btn-primary">Search</Button>
+            <p class="col-lg-10 mb-2 border border-2"></p>
+            <Button id = "button0" class ="col-lg-10 mb-2 past"></Button>
+            <Button id = "button1" class ="col-lg-10 mb-2 past"></Button>
+            <Button id = "button2" class ="col-lg-10 mb-2 past"></Button>
+            <Button id = "button3" class ="col-lg-10 mb-2 past"></Button>
+            <Button id = "button4" class ="col-lg-10 mb-2 past"></Button>
+            <Button id = "button5" class ="col-lg-10 mb-2 past"></Button>
+            <Button id = "button6" class ="col-lg-10 mb-2 past"></Button>
+            <Button id = "button7" class ="col-lg-10 mb-2 past"></Button>
+            <Button id = "button8" class ="col-lg-10 mb-2 past"></Button>
+            <Button id = "button9" class ="col-lg-10 mb-2 past"></Button>
+         
         </aside>
 
 
 <!-- Main Title Block -->
 
-        <div class="col-lg-9">
-            <div class="border border-3">
-                <h2 class="weather" id="cityTitle"></h2>
-                
+        <div class="col-lg-9" >
+            <div id = "title" class="border border-3 ">
+                <div class = "d-flex">
+                <h2 class="weather" id="cityTitle" display: inline></h2>
+                <img id = mainicon>
+            </div>
                 <h6 id ="Temp"></h6>
                 <h6 id ="Wind"></h6>
                 <h6 id ="Humidity" ></h6>
             </div>
-            <div>
-                <h5 class="Weather">5 Day Forecast</h5>
-                <h6 class="Weather">More stuff</h6>
-                <h6 id = wicon></h6> 
+
+<!-- Block for 5 day forcast -->
+
+            <div >
+                <br>
+                    <h5 id = "forcast" ="Weather"></h5>
+             <br>
+            </div> 
+
+            <!-- Individual cards -->
+
+            <div class =  "d-flex flex-row justify-content-between"> 
+
+                <div id = "1" class = "fiveDay card" >
+                    <div id = "date1" class = "card-header letter"></div>
+                    <img id = "icon1"class = "wicon card-img" src="..." alt="Card image cap">
+                    <div  id = "temp1"  class = "card-body letter"></div>
+                    <div  id = "wind1"  class = "card-body letter"></div>
+                    <div  id = "humi1"  class = "card-body letter"></div>
+                </div>
+
+                    <div id = "2" class = "fiveDay card" >
+                      <div id = "date2" class = "card-header letter"></div>
+                        <img id = "icon2"class = "wicon card-img" src="..." alt="Card image cap">
+                        <div  id = "temp2"  class = "card-body letter"></div>
+                        <div  id = "wind2"  class = "card-body letter"></div>
+                        <div  id = "humi2"  class = "card-body letter"></div>
+                    </div>
+
+                    <div id = "3" class = "fiveDay card" >
+                        <div id = "date3" class = "card-header letter"></div>
+                        <img id = "icon3"class = "wicon card-img" src="..." alt="Card image cap">
+                        <div  id = "temp3"  class = "card-body letter"></div>
+                        <div  id = "wind3"  class = "card-body letter"></div>
+                        <div  id = "humi3"  class = "card-body letter"></div>
+                    </div>
+        
+                    <div id = "4" class = "fiveDay card" >
+                        <div id = "date4" class = "card-header letter"></div>
+                        <img id = "icon4"class = "wicon card-img" src="..." alt="Card image cap">
+                        <div  id = "temp4"  class = "card-body letter"></div>
+                        <div  id = "wind4"  class = "card-body letter"></div>
+                        <div  id = "humi4"  class = "card-body letter"></div>
+                    </div>
+
+                    <div id = "5" class = "fiveDay card" >
+                        <div id = "date5" class = "card-header letter"></div>
+                        <img id = "icon5" class = "wicon card-img" src="..." alt="Card image cap">
+                        <div  id = "temp5"  class = "card-body letter"></div>
+                        <div  id = "wind5"  class = "card-body letter"></div>
+                        <div  id = "humi5"  class = "card-body letter"></div>
+                     </div>
+                
+                </div>
+            </div>
+               
             </div>
         </div>
     </main>
