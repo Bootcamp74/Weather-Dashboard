@@ -1,6 +1,6 @@
-
 // Needed to change const key to var key to run in github??
 // Error: "key already defined." Ran fine in Live server
+
 var x
 var key = 'fc8bffadcdca6a94d021c093eac22797'
 var key1 ='4405d10b6225de2b46a773cf230ca378'
@@ -40,6 +40,9 @@ var icon5 = document.getElementById('icon5')
 var temp5 = document.getElementById('temp5')
 var wind5 = document.getElementById('wind5')
 var humi5 = document.getElementById('humi5')
+var title = document.getElementById("title")
+
+
 
 var pastCities = []
 var temp
@@ -58,8 +61,34 @@ var dayTemp = []
 var dayHumid = []
 var timeZone
 
-function myFunction () {
-   
+
+// Gets cities out of local storage at a initial startup or refresh
+
+function initial () {
+
+  temp = localStorage.getItem("weather") 
+
+//  // if statement for no Storage
+
+ if (temp  == null) {
+  return
+  }
+
+
+//  compare cityNam to each element of pastCities
+
+   pastCities = JSON.parse(temp)
+
+   for (let i = 0; i < pastCities.length; i++) {
+    temp = JSON.stringify(pastCities);
+    localStorage.setItem("weather", temp);
+   }
+
+ for (let i = 0; i < pastCities.length; i++) {
+  
+    document.getElementById("button" + i).style.display="block";
+    document.getElementById("button" + i).innerHTML= pastCities[i]
+ }  
 }
 
 // Test for clicks button function
@@ -78,7 +107,7 @@ document.getElementById("button9").addEventListener("click", start9);
 
 
 // buttons functions
-// These functions crete the past search buttons with names of cities in the inner HTML
+// These functions create the past search buttons with names of cities in the inner HTML
 
 
 function start0 () {
@@ -132,11 +161,12 @@ function start9 () {
 }
 
 
-
+initial();
 
 
 function start ()
 {
+ 
   
   var city = document.getElementById("citysearch").value
 
@@ -192,7 +222,6 @@ function start ()
     var cityLat = data[0].lat
     var cityLon = data[0].lon
   
- myFunction()
 
 // Get past city searches out of local storage
 
@@ -239,7 +268,6 @@ x = 0
   
     document.getElementById("button" + i).style.display="block";
     document.getElementById("button" + i).innerHTML= pastCities[i]
-  
  }
 
  // Fetch request for weather
@@ -280,6 +308,15 @@ fetch(requestUrl)
 
 
       // Get weather information for 5 days and display into cards
+      document.getElementById("forcast").innerHTML=("5 Day Forecast")
+      document.getElementById("1").style.display= "block";
+      document.getElementById("2").style.display= "block";
+      document.getElementById("3").style.display= "block";
+      document.getElementById("4").style.display= "block";
+      document.getElementById("5").style.display= "block";
+      document.getElementById("title").style.display= "block";
+
+
 
         if (index[i] + timeZone < 14 && index[i] + timeZone > 10) {
         date1.innerHTML = data.list[8].dt_txt.slice(5,7)  + "/" + data.list[+8].dt_txt.slice(8,10)  + "/" + data.list[8].dt_txt.slice(0,4)
@@ -323,34 +360,9 @@ fetch(requestUrl)
         humi4.innerHTML = "Humidity: "+ data.list[32].main.humidity + " %"
         humi5.innerHTML = "Humidity: "+ data.list[39].main.humidity + " %"
 
-
         }
       }
-  
-   
-
-
-
-
-       
-   
-
-
-
-
-
-
-
-
-
-        
-  
-  
-      
       })
-      
-
-
       })
 
 
